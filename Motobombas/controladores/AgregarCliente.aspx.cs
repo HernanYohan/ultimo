@@ -39,7 +39,7 @@ public partial class AgregarCliente : System.Web.UI.Page
         
         //nuevo.Nombre = TB_nombre.Text;
         //nuevo.Apellido = TB_apellido.Text;
-        // ClientScriptManager cm = this.ClientScript;
+        ClientScriptManager cm = this.ClientScript;
       
      //   if (Double.Parse(TB_telefonocliente.Text) <= 99999999999)
        // {
@@ -56,7 +56,7 @@ public partial class AgregarCliente : System.Web.UI.Page
 
             //cliente.insertarCliente(nuevo);
 
-            //cm.RegisterClientScriptBlock(this.GetType(), "", "<script type='text/javascript'>alert('Agregado correctamente');window.location=\"AgregarCliente.aspx\"</script>");
+            cm.RegisterClientScriptBlock(this.GetType(), "", "<script type='text/javascript'>alert('Agregado correctamente');window.location=\"AgregarCliente.aspx\"</script>");
 
         //}
        // else

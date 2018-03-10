@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Logica;
+using Utilitarios;
 
 public partial class vistas_Carrito : System.Web.UI.Page
 {
@@ -31,20 +32,15 @@ public partial class vistas_Carrito : System.Web.UI.Page
 
     protected void GV_venta_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName == "B_eliminar")
-        {
+        L_carrito valida = new L_carrito();
+        U_datos dato = new U_datos();
+        dato = valida.valida(e.CommandName, e.CommandArgument.ToString());
 
-            int index;
-            Dao_carrito nuevo = new Dao_carrito();
+       
+            Session["id_venta"] = dato.Index;
+            Response.Redirect(dato.Url);
 
-            index = int.Parse(e.CommandArgument.ToString());
-            Session["id_venta"] = index;
-            nuevo.eliminarPedido(index);
-
-
-            Response.Redirect("Carrito.aspx");
-
-        }
+        
     }
     protected void B_comprar_Click(object sender, EventArgs e)
     {

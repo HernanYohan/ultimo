@@ -33,3 +33,8 @@ C:\Users\user\Documents\GitHub\Motobombas-IS2\Utilitarios\bin\Debug\Utilitarios.
 C:\Users\user\Documents\GitHub\Motobombas-IS2\Utilitarios\obj\Debug\Utilitarios.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\Motobombas-IS2\Utilitarios\obj\Debug\Utilitarios.dll
 C:\Users\user\Documents\GitHub\Motobombas-IS2\Utilitarios\obj\Debug\Utilitarios.pdb
+C:\Users\user\Documents\GitHub\ultimo\Utilitarios\bin\Debug\Utilitarios.dll
+C:\Users\user\Documents\GitHub\ultimo\Utilitarios\bin\Debug\Utilitarios.pdb
+C:\Users\user\Documents\GitHub\ultimo\Utilitarios\obj\Debug\Utilitarios.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\ultimo\Utilitarios\obj\Debug\Utilitarios.dll
+C:\Users\user\Documents\GitHub\ultimo\Utilitarios\obj\Debug\Utilitarios.pdb

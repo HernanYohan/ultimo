@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="D_carrito.cs" />
     <Compile Include="D_Catalogo.cs" />
     <Compile Include="D_Cliente.cs" />
     <Compile Include="D_Motobombas.cs" />

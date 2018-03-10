@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Logica;
+using Utilitarios;
 
 public partial class vistas_Bombas_Cliente : System.Web.UI.Page
 {
@@ -29,16 +30,12 @@ public partial class vistas_Bombas_Cliente : System.Web.UI.Page
     }
     protected void GV_bombas_cliente_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName == "B_obtener_bombas")
-        {
+        L_bombas_cliente valida = new L_bombas_cliente();
+        U_datos dato = new U_datos();
+        dato = valida.valida(e.CommandName,e.CommandArgument.ToString());
+            Session["id_producto"] = dato.Index;
+            Response.Redirect(dato.Url);
 
-            int index;
-
-
-            index = int.Parse(e.CommandArgument.ToString());
-            Session["id_producto"] = index;
-            Response.Redirect("seleccionCarrito.aspx");
-
-        }
+      
     }
 }

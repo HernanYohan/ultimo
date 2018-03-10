@@ -40,6 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="L_accesorios_cliente.cs" />
+    <Compile Include="L_bombas_cliente.cs" />
+    <Compile Include="L_carrito.cs" />
+    <Compile Include="l_catalogo_cliente.cs" />
     <Compile Include="L_Catologo.cs" />
     <Compile Include="L_Cliente.cs" />
     <Compile Include="L_MasterAdmin.cs" />
@@ -50,6 +54,8 @@
     <Compile Include="L_PQR.cs" />
     <Compile Include="L_productos.cs" />
     <Compile Include="L_Proveedor.cs" />
+    <Compile Include="L_seleccion_carrito.cs" />
+    <Compile Include="L_tanques_cliente.cs" />
     <Compile Include="L_Usuario.cs" />
     <Compile Include="Mac.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

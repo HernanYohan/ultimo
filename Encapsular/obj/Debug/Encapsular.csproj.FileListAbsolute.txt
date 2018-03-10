@@ -28,3 +28,8 @@ C:\Users\user\Documents\GitHub\Motobombas-IS2\Encapsular\bin\Debug\Encapsular.pd
 C:\Users\user\Documents\GitHub\Motobombas-IS2\Encapsular\obj\Debug\Encapsular.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\Motobombas-IS2\Encapsular\obj\Debug\Encapsular.dll
 C:\Users\user\Documents\GitHub\Motobombas-IS2\Encapsular\obj\Debug\Encapsular.pdb
+C:\Users\user\Documents\GitHub\ultimo\Encapsular\bin\Debug\Encapsular.dll
+C:\Users\user\Documents\GitHub\ultimo\Encapsular\bin\Debug\Encapsular.pdb
+C:\Users\user\Documents\GitHub\ultimo\Encapsular\obj\Debug\Encapsular.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\GitHub\ultimo\Encapsular\obj\Debug\Encapsular.dll
+C:\Users\user\Documents\GitHub\ultimo\Encapsular\obj\Debug\Encapsular.pdb

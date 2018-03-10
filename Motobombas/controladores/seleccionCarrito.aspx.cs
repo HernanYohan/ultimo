@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Logica;
-
+using Utilitarios;
 public partial class vistas_seleccionCarrito : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -39,32 +39,15 @@ public partial class vistas_seleccionCarrito : System.Web.UI.Page
 
     protected void GV_Verproducto_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName == "B_agregarp")
-        {
 
-            int index;
-
-            index = int.Parse(e.CommandArgument.ToString());
+        L_seleccion_carrito nuevo = new L_seleccion_carrito();
+        U_datos msm = new U_datos();
+        msm = nuevo.venta(e.CommandName, e.CommandArgument.ToString(), Int32.Parse(TB_cantidad.Text), Int32.Parse(Session["id_usuaro"].ToString()), Int32.Parse(Session["id_producto"].ToString()));
+        
             ClientScriptManager cm = this.ClientScript;
-            if (Int32.Parse(TB_cantidad.Text) <= index)
-            {
-
-                E_venta nuevo = new E_venta();
-                Dao_carrito agregar = new Dao_carrito();
-                
-                nuevo.Cantidad = Int32.Parse(TB_cantidad.Text);
-                nuevo.Id_estado = 2;
-                nuevo.Id_cliente = Int32.Parse(Session["id_usuaro"].ToString());
-                nuevo.Id_producto = Int32.Parse(Session["id_producto"].ToString());
-                agregar.agregarCarrito(nuevo);
-
-                cm.RegisterClientScriptBlock(this.GetType(), "", "<script type='text/javascript'>alert('Producto agregado corectamente');window.location=\"seleccionCarrito.aspx\"</script>");
-            }
-            else
-            {
-                cm.RegisterClientScriptBlock(this.GetType(), "", "<script type='text/javascript'>alert('No contamos con la cantidad solicitada. ');window.location=\"Catalogo_Cliente.aspx\"</script>");
-            }
-        }
+            
+                cm.RegisterClientScriptBlock(this.GetType(), "", msm.Url);
+            
     }
     protected void B_agregarp_Click(object sender, EventArgs e)
     {

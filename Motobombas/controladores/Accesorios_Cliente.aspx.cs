@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Logica;
+using Utilitarios;
 
 public partial class vistas_Accesorios_Cliente : System.Web.UI.Page
 {
@@ -24,18 +25,16 @@ public partial class vistas_Accesorios_Cliente : System.Web.UI.Page
     }
     protected void GV_accesorios_cliente_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        if (e.CommandName == "B_obtener_accesorios")
-        {
+        L_accesorios_cliente validar = new L_accesorios_cliente();
+        U_datos dato = new U_datos();
 
-            int index;
-
-
-            index = int.Parse(e.CommandArgument.ToString());
-            Session["id_producto"] = index;
+        dato = validar.valida(e.CommandName, e.CommandArgument.ToString());
+        
+            Session["id_producto"] = dato.Index;
             
-            Response.Redirect("seleccionCarrito.aspx");
+            Response.Redirect(dato.Url);
 
-        }
+       
         
     }
     protected void GV_accesorios_cliente_SelectedIndexChanged(object sender, EventArgs e)
