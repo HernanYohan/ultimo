@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <CR:CrystalReportViewer ID="CRV_Total" runat="server" AutoDataBind="True" GroupTreeImagesFolderUrl="" Height="50px" ReportSourceID="CRS_Total" ToolbarImagesFolderUrl="" ToolPanelWidth="200px" Width="350px" />
     <CR:CrystalReportSource ID="CRS_Total" runat="server">
-        <Report FileName="Reporte_clien\Reporte\Report_Factura_Cliente.rpt">
+        <Report FileName="C:\Users\user\Documents\GitHub\ultimo\Motobombas\Reporte_clien\Reporte\Report_Factura_Cliente.rpt">
         </Report>
     </CR:CrystalReportSource>
 </asp:Content>

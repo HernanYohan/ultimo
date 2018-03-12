@@ -14,11 +14,12 @@ namespace Logica
     {
         public U_usuarios logear(String usuario, String clave, String sesion)
         {
+            
             D_usuario datos_usuario = new D_usuario();
             DataTable data = datos_usuario.loggin(usuario, clave);
             Mac datos = new Mac();
             Int32 rol = 0;
-
+            
             U_usuarios datosUsuario = new U_usuarios();
 
             if (int.Parse(data.Rows[0]["id_cliente"].ToString()) > 0)

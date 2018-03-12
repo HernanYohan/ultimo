@@ -9,6 +9,9 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Utilitarios;
+using Logica;
+
 
 public partial class vistas_GenerarToken : System.Web.UI.Page
 {
@@ -18,9 +21,19 @@ public partial class vistas_GenerarToken : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-         Dao_Usuario dao = new Dao_Usuario ();
-         DataTable validez = dao.generarToken(TB_User_Name.Text);
-         if (int.Parse(validez.Rows[0]["id_cliente"].ToString()) > 0)
+         
+        
+        U_token nuevo = new U_token();
+        
+        l_generar_token token = new l_generar_token();
+
+        nuevo = token.token(encriptar(JsonConvert.SerializeObject(nuevo)), "su link de acceso es: " + "http://localhost:36321/vistas/RecuperarContrase%C3%B1a.aspx?" + encriptar(JsonConvert.SerializeObject(token)), TB_User_Name.Text);
+
+
+        L_Mensaje.Text = nuevo.Msm;
+       
+
+         /*if (int.Parse(validez.Rows[0]["id_cliente"].ToString()) > 0)
         {
             E_Token token = new E_Token();  
             token.Id_cliente = int.Parse(validez.Rows[0]["id_cliente"].ToString());
@@ -50,7 +63,7 @@ public partial class vistas_GenerarToken : System.Web.UI.Page
         else
         {
             L_Mensaje.Text = "El usurio digitado no existe";
-        } 
+        } */
 
     }
     private string encriptar(string input)

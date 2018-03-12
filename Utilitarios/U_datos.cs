@@ -22,5 +22,12 @@ namespace Utilitarios
             get { return url; }
             set { url = value; }
         }
+        private String msm;
+
+        public String Msm
+        {
+            get { return msm; }
+            set { msm = value; }
+        }
     }
 }

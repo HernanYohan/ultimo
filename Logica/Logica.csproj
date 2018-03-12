@@ -40,12 +40,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Correo.cs" />
     <Compile Include="L_accesorios_cliente.cs" />
     <Compile Include="L_bombas_cliente.cs" />
     <Compile Include="L_carrito.cs" />
     <Compile Include="l_catalogo_cliente.cs" />
     <Compile Include="L_Catologo.cs" />
     <Compile Include="L_Cliente.cs" />
+    <Compile Include="L_factura.cs" />
+    <Compile Include="l_generar_token.cs" />
     <Compile Include="L_MasterAdmin.cs" />
     <Compile Include="L_masterCliente.cs" />
     <Compile Include="L_MasterVisitante.cs" />
@@ -54,6 +57,7 @@
     <Compile Include="L_PQR.cs" />
     <Compile Include="L_productos.cs" />
     <Compile Include="L_Proveedor.cs" />
+    <Compile Include="L_recupera_contrasena.cs" />
     <Compile Include="L_seleccion_carrito.cs" />
     <Compile Include="L_tanques_cliente.cs" />
     <Compile Include="L_Usuario.cs" />

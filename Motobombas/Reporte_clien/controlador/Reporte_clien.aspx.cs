@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Logica;
 
 public partial class Reporte_ad_Vista_Reporte_clien : System.Web.UI.Page
 {
@@ -14,8 +15,9 @@ public partial class Reporte_ad_Vista_Reporte_clien : System.Web.UI.Page
             Response.Redirect("Login.aspx");
 
         Response.Cache.SetNoStore();
+        L_factura nueva = new L_factura();
 
-        CRS_Factura.ReportDocument.SetDataSource(llenarFactura());
+        CRS_Factura.ReportDocument.SetDataSource(nueva.llenarFactura( Int32.Parse(Session["id_usuaro"].ToString())));
         CRV_Factura.ReportSource = CRS_Factura;
 
         Response.Cache.SetNoStore();
